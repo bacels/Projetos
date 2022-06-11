@@ -1,3 +1,8 @@
+# Os videos serão salvos na pasta onde o programa estiver, logo, este deve ser o caminho utilizado para pegar os arquivos de video para transferencia
+# No programa "caminho" e "destino" sao as variaveis que armazenam os caminhos onde as pastas estão
+# "Save_Videos" e "Saves" são as pastas onde os arquivos se encontram e "arquivos" são as gravaçoes
+# by Vitor Barcelos
+
 import urllib.request
 import cv2
 import numpy as np
