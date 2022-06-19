@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 video_ip_on = True
-duracaoFilme = 15
+duracaoFilme = 60
 fimGravacao= False
 
 cap = cv2.VideoCapture(0)
@@ -36,7 +36,7 @@ largura = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH) + 0.5)
 altura =  int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT) + 0.5)
 dimensoes = (largura,altura)
     
-saida = cv2.VideoWriter(nomeArquivo, cv2.VideoWriter_fourcc('M','J','P','G') , 21.0, dimensoes)  
+saida = cv2.VideoWriter(nomeArquivo, cv2.VideoWriter_fourcc('M','J','P','G') , 19.0, dimensoes)  
 
 cv2.namedWindow('Sz_Cloud', cv2.WINDOW_NORMAL)
 #cv2.setWindowProperty('Sz_Laboratorio_XVO', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
@@ -64,5 +64,5 @@ cv2.destroyAllWindows()
 lista_arquivos = os.listdir(caminho + '\Save_Videos')
 for arquivo in lista_arquivos:
     if '.avi' in arquivo:
-        os.rename(caminho + f"\Save_Videos\{arquivo}", caminho + f"\Saves\{arquivo}")
+        os.rename(caminho + f"\Save_Videos\{arquivo}", destino + f"\Saves\{arquivo}")
         print(arquivo)

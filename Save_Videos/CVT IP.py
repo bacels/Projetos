@@ -70,5 +70,5 @@ cv2.destroyAllWindows()
 lista_arquivos = os.listdir(caminho + '\Save_Videos')
 for arquivo in lista_arquivos:
     if '.avi' in arquivo:
-        os.rename(caminho + f"\Save_Videos\{arquivo}", caminho + f"\Saves\{arquivo}")
+        os.rename(caminho + f"\Save_Videos\{arquivo}", destino + f"\Saves\{arquivo}")
         print(arquivo)
