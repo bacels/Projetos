@@ -39,7 +39,7 @@ largura = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH) + 0.5)
 altura =  int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT) + 0.5)
 dimensoes = (largura,altura)
     
-saida = cv2.VideoWriter(nomeArquivo, cv2.VideoWriter_fourcc('M','J','P','G') , 10.0, dimensoes)  
+saida = cv2.VideoWriter(nomeArquivo, cv2.VideoWriter_fourcc('M','J','P','G') , 2.5, dimensoes)  
 
 cv2.namedWindow('Sz_Cloud', cv2.WINDOW_NORMAL)
 #cv2.setWindowProperty('Sz_Laboratorio_XVO', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
@@ -70,5 +70,5 @@ cv2.destroyAllWindows()
 lista_arquivos = os.listdir(caminho + '\Save_Videos')
 for arquivo in lista_arquivos:
     if '.avi' in arquivo:
-        os.rename(caminho + f"\Save_Videos\{arquivo}", destino + f"\Saves\{arquivo}")
+        os.rename(caminho + f"\Save_Videos\{arquivo}", caminho + f"\Saves\{arquivo}")
         print(arquivo)
